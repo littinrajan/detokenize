@@ -25,7 +25,7 @@
 The source code is currently hosted on GitHub at: https://github.com/littinrajan/detokenize
 
 Binary installers for the latest released version are available at the [Python
-Package Index (PyPI)](https://pypi.org/project/pandas) and on [Conda](https://docs.conda.io/en/latest/).
+Package Index (PyPI)](https://pypi.org/project/detokenize) and on [Conda](https://docs.conda.io/en/latest/).
 
 ```sh
 # conda
