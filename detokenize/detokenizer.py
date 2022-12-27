@@ -1,6 +1,7 @@
 import string
 
-PUNCT_LIST = string.punctuation
+PUNCTUATION_LIST = string.punctuation
+
 
 def detokenize(tokens):
     """
@@ -8,13 +9,14 @@ def detokenize(tokens):
     :param tokens:
     :return: detokenized text
     """
-    process_tokens = lambda token_list, PUNCT: [" "+token if not token.startswith("'") and token not in PUNCT else token
-                                               for token in token_list]
-    processed_tokens = process_tokens(tokens, PUNCT_LIST)
-    detokenized_sentense = "".join(processed_tokens)
-    return detokenized_sentense
+    process_tokens = lambda token_list, puncts: [" "+token if
+                                                 not token.startswith("'") and token not in
+                                                 puncts else token for token in token_list]
+    processed_tokens = process_tokens(tokens, PUNCTUATION_LIST)
+    detokenized_sentence = "".join(processed_tokens).strip()
+    return detokenized_sentence
 
 
 if __name__ == '__main__':
-    tokens = ['This', 'is', 'a', 'sample', 'text', '.']
-    print(detokenize(tokens))
+    tokens_list = ['This', 'is', 'a', 'sample', 'text', '.']
+    print(detokenize(tokens_list))
