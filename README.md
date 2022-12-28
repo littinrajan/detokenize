@@ -17,6 +17,7 @@
 **Littin Rajan**
 
 ## Main Features
+  - Easy de-tokenization
   - Light-weight package
   - No more dependencies
   - Powerful, flexible
